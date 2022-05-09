@@ -14,8 +14,8 @@ def taylor(max_loop, num_min):
     num_thread -= 1
 
 soma = 0        
-_thread.start_new_thread(taylor, (5, 1))
-_thread.start_new_thread(taylor, (10, 6))
+_thread.start_new_thread(taylor, (500, 1))
+_thread.start_new_thread(taylor, (1000, 501))
 
 while not thread_started:
     pass
