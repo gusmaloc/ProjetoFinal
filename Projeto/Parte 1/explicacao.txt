@@ -1,0 +1,8 @@
+Na versão 1 do nosso projeto, fizemos o código da Série de Taylor de modo serial, ou seja, sem a paralelização e/ou fragmentação das funções. 
+Para esta primeira versão do projeto, usamos c++.
+
+O código se baseia em duas partes, onde a primeira é a main, no qual declaramos uma variável T que recebe um número do tipo double onde armazenamos 
+o valor -1. Enquanto T for diferente de 0, pedimos para que o usuário de um input de um número, que guardamos em T, que será o valor de N da Série 
+de Taylor. Em seguida, chamamos a função Taylor, que é a segunda parte do código. Nela, temos um loop que calcula o valor 1/i, sendo que i é uma váriavel
+que vai de 1 até T, e este calculo é armazenado em uma váriavel temp do tipo double. Posteriormente, declaramos que o valor result é igual a ele mesmo
+somado com o temp.
