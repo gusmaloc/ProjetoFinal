@@ -20,22 +20,11 @@ if __name__ == '__main__':
     for i in range(num_subProcess):
         p = mp.Process(target = taylor, args=(start,end,q))
         p.start()
-        print("\nResultados: ", q.get())
+       # print("\nResultados: ", q.get())
         start += 250
         end += 250
 
- 
     p.join()
-    print("\nResultados: ",  q.get())
-
-
-    
-
-#def foo(q):
- #   q.put('hello')
-
-  #  q = mp.Queue()
-   # p = mp.Process(target=foo, args=(q,))
-   # p.start()
-    #print(q.get())
-    #p.join()
+    for i in range(num_subProcess):
+        global_result += q.get() 
+    print("\nResultados: ",  global_result)
