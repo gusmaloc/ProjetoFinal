@@ -1,0 +1,4 @@
+Nesta versão do projeto, nós nos deparamos com uma dificuldade ao tentar acessar os recursos compartilhados com capacidade limitada, por isso decidimos
+fazer o uso da biblioteca de semáforos. Assim, conseguimos solucionar o problema de competição de processos por regiões críticas. 
+O semáforo fala quantos processos são permitidos a ter acesso por vez. Após essa implementação, descobrimos também que o Python tem seu próprio semáforo
+automaticamente, então a nossa implementação do mesmo só deixa o código mais devagar.
