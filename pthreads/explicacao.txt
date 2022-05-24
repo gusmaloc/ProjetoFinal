@@ -1,4 +1,4 @@
-Na segunda versão do nosso projeto, optamos por fazer a troca de linguagem para Python, acreditando que seria mais fácil sua implementação. 
+Nesta versão do nosso projeto, optamos por fazer a troca de linguagem para Python, acreditando que seria mais fácil sua implementação. 
 A função de Taylor funciona da mesma forma que na primeira versão, porém houve uma troca na hora da chamada da mesma, pois dividimos ela em threads,
 para que supostamente ocorresse a paralelização. Porém, descobrimos que a paralelização em Python por Threads não funciona, deixando o código mais
 lento. Isso ocorre devido ao GIL (Global Interpreter Lock), que bloqueia o funcionamento correto de pthreads. 
