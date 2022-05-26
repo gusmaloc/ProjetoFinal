@@ -1,3 +1,4 @@
+import multiprocessing as mp
 from multiprocessing import Pool
 
 global_result = 0
@@ -8,5 +9,6 @@ def taylor(x):
     return global_result
 
 if __name__ == '__main__':
-    with Pool(5) as p:
-        print(p.map(taylor,range(1,10)))
+    mp.set_start_method('spawn')
+    with Pool(10) as p:
+        print(p.map(taylor,range(1,1000)))
