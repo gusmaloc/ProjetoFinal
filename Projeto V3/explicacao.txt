@@ -1,0 +1,9 @@
+Na ultima versão do nosso projeto, fizemos diferentes atualizações, sendo a update3.py a versão final, e mais rápida.
+Essa atualização foi feita devido ao bloqueio de processamento paralelo de threads na linguagem python pelo GIL, como citado na versão anterior.
+A primeira implementação usando multiprocessadores foi o multiprocessing.py. Nela, importamos a biblioteca de multiprocessadores e criamos quatro 
+sub-processos com o objetivo de otimizar o tempo, sendo uma implementação simples onde chamavamos cada sub-processo separadamente.
+Com isso, nós queriamos testar a biblioteca usando process e filas, sendo esta o update.py. Como essa versão ficou mais devagar que a serial, pois a 
+cada vez que entrava no loop ele criava um novo sub-processo, mudamos para a função Pool, indicada pelo professor, que já cria os sub-processos antes 
+de inicializar a rodar o código, deixando-o mais rápido. 
+Fizemos isso no update2.py, porém para otimizar ainda mais, simplificamos a função Taylor para retornar apenas 1 divido pelo número dado, e usamos uma
+função reduce para fazer a soma dos números na lista que chamamos de global_result, diminuindo o tempo.
